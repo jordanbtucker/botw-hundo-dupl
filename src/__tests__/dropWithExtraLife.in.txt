@@ -1,0 +1,2 @@
+Get 1 Weapon[life=80000] 1 Bow[life=80000] 1 Shield[life=80000]
+Drop 1 Weapon 1 Bow 1 Shield
