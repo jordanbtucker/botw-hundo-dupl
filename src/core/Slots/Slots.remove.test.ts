@@ -100,7 +100,7 @@ describe("Slots.remove", ()=>{
 		expect(slots.getSlotsRef()).toEqualItemStacks(expected);
 	});
 	it("Removes bows with increased durability", ()=>{
-		const mockItem1 = createEquipmentMockItem("WeaponA", ItemType.Bow);
+		const mockItem1 = createEquipmentMockItem("BowA", ItemType.Bow);
 		const stackToRemove = createEquipmentStack(mockItem1, 1000, false);
 
 		const stacks: ItemStack[] = [createEquipmentStack(mockItem1, 80000, false)];
@@ -112,7 +112,7 @@ describe("Slots.remove", ()=>{
 		expect(slots.getSlotsRef()).toEqualItemStacks(expected);
 	});
 	it("Removes shields with increased durability", ()=>{
-		const mockItem1 = createEquipmentMockItem("WeaponA", ItemType.Shield);
+		const mockItem1 = createEquipmentMockItem("ShieldA", ItemType.Shield);
 		const stackToRemove = createEquipmentStack(mockItem1, 1000, false);
 
 		const stacks: ItemStack[] = [createEquipmentStack(mockItem1, 80000, false)];
