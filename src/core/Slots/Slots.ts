@@ -79,8 +79,9 @@ export class Slots {
 					// find the right slot
 					s++;
 				}else{
-					// fully remove weapons, bows, and shields instead of reducing their life
-					if(stack.item.type === ItemType.Weapon || stack.item.type === ItemType.Bow || stack.item.type === ItemType.Shield){
+					// fully remove non-stackable items like weapons, bows,
+					// shields, and armor instead of reducing their life
+					if(!stack.item.stackable){
 						this.internalSlots[i] = stack.modify({count:0});
 						break;
 					}
