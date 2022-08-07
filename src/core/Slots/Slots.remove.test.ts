@@ -123,4 +123,40 @@ describe("Slots.remove", ()=>{
 		expect(removed).toBe(1);
 		expect(slots.getSlotsRef()).toEqualItemStacks(expected);
 	});
+	it("Removes upper armor with increased life", ()=>{
+		const mockItem1 = createEquipmentMockItem("ArmorA", ItemType.ArmorUpper);
+		const stackToRemove = createEquipmentStack(mockItem1, 1000, false);
+
+		const stacks: ItemStack[] = [createEquipmentStack(mockItem1, 80000, false)];
+		const slots = new Slots(stacks);
+
+		const removed = slots.remove(stackToRemove, 0);
+		const expected: ItemStack[] = [];
+		expect(removed).toBe(1);
+		expect(slots.getSlotsRef()).toEqualItemStacks(expected);
+	});
+	it("Removes middle armor with increased life", ()=>{
+		const mockItem1 = createEquipmentMockItem("ArmorA", ItemType.ArmorMiddle);
+		const stackToRemove = createEquipmentStack(mockItem1, 1000, false);
+
+		const stacks: ItemStack[] = [createEquipmentStack(mockItem1, 80000, false)];
+		const slots = new Slots(stacks);
+
+		const removed = slots.remove(stackToRemove, 0);
+		const expected: ItemStack[] = [];
+		expect(removed).toBe(1);
+		expect(slots.getSlotsRef()).toEqualItemStacks(expected);
+	});
+	it("Removes lower armor with increased life", ()=>{
+		const mockItem1 = createEquipmentMockItem("ArmorA", ItemType.ArmorLower);
+		const stackToRemove = createEquipmentStack(mockItem1, 1000, false);
+
+		const stacks: ItemStack[] = [createEquipmentStack(mockItem1, 80000, false)];
+		const slots = new Slots(stacks);
+
+		const removed = slots.remove(stackToRemove, 0);
+		const expected: ItemStack[] = [];
+		expect(removed).toBe(1);
+		expect(slots.getSlotsRef()).toEqualItemStacks(expected);
+	});
 });
